@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Compiles the engine-free assemblies (KettleCog.Core + KettleCog.Simulation) straight from Assets/,
+    with the same target and language version as Unity, so they can be tested without the editor.
+  -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../../../Assets/_Project/Scripts/Core/**/*.cs" />
+    <Compile Include="../../../Assets/_Project/Scripts/Simulation/**/*.cs" />
+  </ItemGroup>
+
+</Project>
